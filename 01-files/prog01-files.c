@@ -33,7 +33,7 @@ int main(int argc, const char * argv[]) {
 	
 	// fd will likely be 3, the first available entry
 	int fd = open(argv[1], O_CREAT | O_RDWR, 0644);
-	
+
 	printf("fd: %d\n", fd);
 	
 	// If fd really has the value 3, this should write a message
