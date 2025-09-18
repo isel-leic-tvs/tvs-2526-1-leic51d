@@ -41,7 +41,7 @@ int main(int argc, const char * argv[]) {
 	write(3, "Hello, ISEL LEIC!\n", 18);
 	
 	// This will write a message into the file referred by fd.
-	write(fd, "Hello, TVS LEIC53D!\n", 20);
+	write(fd, "Hello, TVS LEIC51D!\n", 20);
 
 	close(3);
 
