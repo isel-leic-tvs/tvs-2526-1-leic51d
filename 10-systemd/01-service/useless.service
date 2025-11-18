@@ -1,0 +1,9 @@
+[Unit]
+Description=A useless service, for demo purposes.
+
+[Service]
+ExecStart=/home/jtrindade/isel/tvs/tvs-2526-1-leic51d/10-systemd/01-service/useless.sh
+Restart=always
+User=jtrindade
+Group=jtrindade
+

@@ -1,0 +1,11 @@
+[Unit]
+Description=Echo Service
+Requires=echod.socket
+
+[Service]
+ExecStart=/home/jtrindade/isel/tvs/tvs-2526-1-leic51d/10-systemd/03-echod-lazy/echod
+Restart=always
+
+[Install]
+Also=echod.socket
+
