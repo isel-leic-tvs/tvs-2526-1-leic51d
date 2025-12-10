@@ -1,0 +1,32 @@
+name: democomp
+
+services:
+  app:
+    build: ./app
+    environment:
+      NODE_PORT: "3456"
+    networks:
+      - demonet
+
+  entry:
+    image: nginx:alpine
+    depends_on:
+      - app
+    volumes:
+      - ./entry/demoapp.conf:/etc/nginx/conf.d/demoapp.conf:ro
+    ports:
+      - "5678:6789"    # expõe para o host
+    networks:
+      - demonet
+
+  monitor:
+    image: alpine:latest
+    tty: true
+    depends_on:
+      - entry
+      - app
+    networks:
+      - demonet
+
+networks:
+  demonet: {}
